@@ -61,17 +61,28 @@
               <ul>
                 <li><strong>Category</strong>: Web Application</li>
                 <li><strong>Client</strong>: Myself</li>
-                <li><strong>Stack</strong>: Blazor (.NET 5.0), ASP.NET Identity, Microsoft Azure, Entity Framework Core 6, SQL, Bootstrap 5</li>
+                <li><strong>Stack</strong>: Blazor (.NET 5.0), Entity Framework Core 6, SQL, Bootstrap 5</li>
                 <li><strong>Languages</strong>: C#, Javascript, HTML, CSS</li>
+                <li><strong>Testing</strong>: C#, xUnit, Moq, SQLite</li>
+                <li><strong>Libraries</strong>: dTree (family tree visualization), Bootstrap 5 (UI), ASP.NET Identity (account management), SharpZipLib (extracting uploads into zip folder)</li>
+                <li><strong>Services</strong>: Azure Face API (facial recognition), Azure Computer Vision (to reject adult content), Azure Virtual Machine (hosting platform), SendGrid (email service)</li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2></h2>
+              <h2>PicsOfUs is a place where your uploaded pics are private and accessible only to invited members.</h2>
               <p>
-                PicsOfUs is a Blazor web application for cloud hosted private photo collections shared between families. It's integrated with several of Microsoft Azure's services. This was my first start up, which failed due to competition with a loss leader, but has since been released to the public as open-source software.
+                Have you ever been at Thanksgiving with everyone taking pictures on their phone so everyone can have a picture? With PicsOfUs you can just use the best camera then upload the group picture to the collection.
               </p>
-              <a href="https://github.com/JMHeartley/PicsOfUs" target="_parent">
-                <strong>Click here to view an in-depth breakdown on Github </strong>
+              <ul>
+                <li>Employs the Service/Repository design pattern to separate business and data access logic</li>
+                <li>Integrates editor for creating/updating family member details from faces of uploaded pictures</li>
+                <li>Facilitates querying of uploaded pictures based on the photo subject(s)</li>
+                <li>Gathers related members, then using recursion, constructs a hierarchical data structure to pass to dTree, an open-source family tree visualization library</li>
+                <li>Enables family tree exploration; any tree node can be clicked to view member details</li>
+                <li>Supported by ~100 unit tests</li>
+              </ul>
+              <a href="https://picsof.us" target="_parent">
+                <strong>Check out the demo </strong>
                 <i class="bi bi-box-arrow-up-right"></i>
               </a>
             </div>
