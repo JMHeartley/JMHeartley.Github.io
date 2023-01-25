@@ -2,6 +2,9 @@
    Extra small devices (portrait phones, less than 576px)
    No media query since this is the default in Bootstrap 
 */
+.max-vh-100 {
+    max-height: 100vh !important;
+}
 
 .text-hover-white:hover {
     color: #fff !important;
