@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-project',
-  templateUrl: './project.component.html'
+  selector: 'app-project-details',
+  templateUrl: './project-details.component.html'
 })
-export class ProjectComponent {
+export class ProjectDetailsComponent {
   @Input() imageSrc: string = "";
   @Input() imageAlt: string = "";
   @Input() tags: string[] = [];

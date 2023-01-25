@@ -4,8 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { ProjectComponent } from './project/project.component';
-import { DtreeSeedComponent } from './project/dtree-seed/dtree-seed.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { DtreeSeedComponent } from './project-details/dtree-seed/dtree-seed.component';
 
 const appRoutes: Routes = [
   { path: '', component: DtreeSeedComponent },
@@ -16,7 +16,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     NavigationComponent,
-    ProjectComponent,
+    ProjectDetailsComponent,
     DtreeSeedComponent
   ],
   imports: [
