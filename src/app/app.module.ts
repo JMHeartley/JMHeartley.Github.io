@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { DtreeSeedComponent } from './project-details/dtree-seed/dtree-seed.component';
+import { PicsOfUsComponent } from './project-details/pics-of-us/pics-of-us.component';
 
 const appRoutes: Routes = [
-  { path: '', component: DtreeSeedComponent },
-  { path: 'dtree-seed', component: DtreeSeedComponent }
+  { path: '', component: PicsOfUsComponent },
+  { path: 'dtree-seed', component: DtreeSeedComponent },
+  { path: 'picsofus', component: PicsOfUsComponent }
 ];
 
 @NgModule({
@@ -17,7 +19,8 @@ const appRoutes: Routes = [
     AppComponent,
     NavigationComponent,
     ProjectDetailsComponent,
-    DtreeSeedComponent
+    DtreeSeedComponent,
+    PicsOfUsComponent
   ],
   imports: [
     BrowserModule,
