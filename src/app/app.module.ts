@@ -7,11 +7,13 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { DtreeSeedComponent } from './project-details/dtree-seed/dtree-seed.component';
 import { PicsOfUsComponent } from './project-details/pics-of-us/pics-of-us.component';
+import { DreamloJsComponent } from './project-details/dreamlo.js/dreamlo.js.component';
 
 const appRoutes: Routes = [
-  { path: '', component: PicsOfUsComponent },
+  { path: '', component: DreamloJsComponent },
   { path: 'dtree-seed', component: DtreeSeedComponent },
-  { path: 'picsofus', component: PicsOfUsComponent }
+  { path: 'picsofus', component: PicsOfUsComponent },
+  { path: 'dreamlo.js', component: DreamloJsComponent }
 ];
 
 @NgModule({
@@ -20,7 +22,8 @@ const appRoutes: Routes = [
     NavigationComponent,
     ProjectDetailsComponent,
     DtreeSeedComponent,
-    PicsOfUsComponent
+    PicsOfUsComponent,
+    DreamloJsComponent
   ],
   imports: [
     BrowserModule,
