@@ -7,7 +7,7 @@ import { Project } from "src/app/shared/project.model";
 })
 export class WorkWithMeHereComponent implements Project {
   bannerFilePath: string = 'assets/img/work-with-me-here/main.png';
-  description: string = 'A web app for sharing photos with family and viewing family trees.';
   bannerAltText: string = 'Screenshot of the Work With Me Here main menu';
+  description: string = 'A game where you try to keep up with your dog while working from home; takes place during the 2020 pandemic lockdown.';
   tags: string[] = ['c#', 'unity', 'game', 'game-jam'];
 }
