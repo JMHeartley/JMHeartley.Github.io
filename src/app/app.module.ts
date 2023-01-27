@@ -8,12 +8,14 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { DtreeSeedComponent } from './project-details/dtree-seed/dtree-seed.component';
 import { PicsOfUsComponent } from './project-details/pics-of-us/pics-of-us.component';
 import { DreamloJsComponent } from './project-details/dreamlo.js/dreamlo.js.component';
+import { WorkWithMeHereComponent } from './project-details/work-with-me-here/work-with-me-here.component';
 
 const appRoutes: Routes = [
-  { path: '', component: DreamloJsComponent },
+  { path: '', component: WorkWithMeHereComponent },
   { path: 'dtree-seed', component: DtreeSeedComponent },
   { path: 'picsofus', component: PicsOfUsComponent },
-  { path: 'dreamlo.js', component: DreamloJsComponent }
+  { path: 'dreamlo.js', component: DreamloJsComponent },
+  { path: 'work-with-me-here', component: WorkWithMeHereComponent }
 ];
 
 @NgModule({
@@ -23,7 +25,8 @@ const appRoutes: Routes = [
     ProjectDetailsComponent,
     DtreeSeedComponent,
     PicsOfUsComponent,
-    DreamloJsComponent
+    DreamloJsComponent,
+    WorkWithMeHereComponent
   ],
   imports: [
     BrowserModule,
