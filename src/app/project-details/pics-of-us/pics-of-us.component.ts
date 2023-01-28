@@ -6,9 +6,9 @@ import { Project } from "src/app/shared/project.model";
   templateUrl: './pics-of-us.component.html'
 })
 export class PicsOfUsComponent implements Project {
-  absoluteUrl: string = '/picsofus';
-  bannerFilePath: string = 'assets/img/picsofus/main.png';
-  bannerAltText: string = 'PicsOfUs logo';
-  description: string = 'A web app for sharing photos with family and viewing family trees.';
+  absoluteUrl = '/picsofus';
+  bannerFilePath = 'assets/img/picsofus/main.png';
+  bannerAltText = 'PicsOfUs logo';
+  description = 'A web app for sharing photos with family and viewing family trees.';
   tags: string[] = ['web-app', 'c#', 'blazor', 'razor-pages', 'html', 'css', 'bootstrap', 'javascript', 'ef-core', 'microsoft-azure', 'tdd', 'xunit', 'moq', 'sqlite'];
 }

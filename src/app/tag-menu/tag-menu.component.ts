@@ -5,6 +5,7 @@ import { PicsOfUsComponent } from 'src/app/project-details/pics-of-us/pics-of-us
 import { DreamloJsComponent } from 'src/app/project-details/dreamlo.js/dreamlo.js.component';
 import { WorkWithMeHereComponent } from 'src/app/project-details/work-with-me-here/work-with-me-here.component';
 import { Project } from "../shared/project.model";
+import { Subscription } from "rxjs";
 
 @Component({
   selector: 'app-tag-menu',
@@ -18,8 +19,8 @@ export class TagMenuComponent implements OnInit, OnDestroy {
     new DreamloJsComponent,
     new WorkWithMeHereComponent
   ];
-  paramsSubscribtion: any;
   projectsWithMatchingTag: Project[];
+  paramsSubscribtion: Subscription;
 
   constructor(private route: ActivatedRoute) { }
 
