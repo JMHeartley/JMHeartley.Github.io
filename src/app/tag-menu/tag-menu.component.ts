@@ -11,15 +11,15 @@ import { Project } from "../shared/project.model";
   templateUrl: './tag-menu.component.html'
 })
 export class TagMenuComponent implements OnInit, OnDestroy {
-  tag: string = "";
+  tag: string;
   allProjects: Project[] = [
     new DtreeSeedComponent,
     new PicsOfUsComponent,
     new DreamloJsComponent,
     new WorkWithMeHereComponent
   ];
-  projectsWithMatchingTag: Project[] = [];
   paramsSubscribtion: any;
+  projectsWithMatchingTag: Project[];
 
   constructor(private route: ActivatedRoute) { }
 

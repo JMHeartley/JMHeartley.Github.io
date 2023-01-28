@@ -5,10 +5,10 @@ import { Component, Input } from '@angular/core';
   templateUrl: './project-details.component.html'
 })
 export class ProjectDetailsComponent {
-  @Input() imageSrc: string = "";
-  @Input() imageAlt: string = "";
-  @Input() tags: string[] = [];
-  @Input() githubUrl: string = "";
-  @Input() npmUrl: string = "";
-  @Input() demoUrl: string = "";
+  @Input() imageSrc: string;
+  @Input() imageAlt: string;
+  @Input() tags: string[];
+  @Input() githubUrl: string;
+  @Input() npmUrl: string;
+  @Input() demoUrl: string;
 }

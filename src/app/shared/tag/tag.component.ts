@@ -5,6 +5,6 @@ import { Component, Input } from '@angular/core';
   templateUrl: './tag.component.html'
 })
 export class TagComponent {
-  @Input() tag: string = '';
-  @Input() text: string = '';
+  @Input() tag: string;
+  @Input() text: string;
 }
