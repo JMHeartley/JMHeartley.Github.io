@@ -6,6 +6,7 @@ import { Project } from "src/app/shared/project.model";
   templateUrl: './pics-of-us.component.html'
 })
 export class PicsOfUsComponent implements Project {
+  absoluteUrl: string = '/picsofus';
   bannerFilePath: string = 'assets/img/picsofus/main.png';
   bannerAltText: string = 'PicsOfUs logo';
   description: string = 'A web app for sharing photos with family and viewing family trees.';

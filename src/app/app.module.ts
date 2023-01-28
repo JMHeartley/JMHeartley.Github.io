@@ -9,9 +9,12 @@ import { DtreeSeedComponent } from './project-details/dtree-seed/dtree-seed.comp
 import { PicsOfUsComponent } from './project-details/pics-of-us/pics-of-us.component';
 import { DreamloJsComponent } from './project-details/dreamlo.js/dreamlo.js.component';
 import { WorkWithMeHereComponent } from './project-details/work-with-me-here/work-with-me-here.component';
+import { TagMenuComponent } from './tag-menu/tag-menu.component';
+import { TagComponent } from './shared/tag/tag.component';
 
 const appRoutes: Routes = [
   { path: '', component: WorkWithMeHereComponent },
+  { path: 'tags/:tag', component: TagMenuComponent },
   { path: 'dtree-seed', component: DtreeSeedComponent },
   { path: 'picsofus', component: PicsOfUsComponent },
   { path: 'dreamlo.js', component: DreamloJsComponent },
@@ -26,7 +29,9 @@ const appRoutes: Routes = [
     DtreeSeedComponent,
     PicsOfUsComponent,
     DreamloJsComponent,
-    WorkWithMeHereComponent
+    WorkWithMeHereComponent,
+    TagMenuComponent,
+    TagComponent
   ],
   imports: [
     BrowserModule,

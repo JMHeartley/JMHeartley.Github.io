@@ -1,5 +1,5 @@
 export interface Project {
-    name: string;
+    absoluteUrl: string;
     bannerFilePath: string;
     bannerAltText: string;
     description: string;

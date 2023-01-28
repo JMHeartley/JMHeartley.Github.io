@@ -1,0 +1,19 @@
+<div class="d-flex flex-column vh-100 max-vh-100">
+    <div class="py-3">
+        <h3 class="text-center">Projects with <em>{{this.tag}}</em> tag:</h3>
+    </div>
+    <div class="container overflow-auto overflow-lg-hidden scrollbar-hidden flex-grow-1">
+        <div class="row p-3">
+            <a *ngFor="let project of this.projectsWithMatchingTag"
+                class="row g-0 my-3 border border-2 border-secondary border-hover-white rounded-3 text-reset text-decoration-none"
+                [routerLink]="this.project.absoluteUrl">
+                <img [src]="this.project.bannerFilePath" [alt]="this.project.bannerAltText"
+                    class="image-fluid rounded col col-sm-4 col-lg-5">
+                <div class="col d-flex flex-column px-3 px-md-2 pt-2 pb-1">
+                    <p class="lead flex-grow-1 fs-lg-4">{{this.project.description}}</p>
+                    <small class="text-muted fs-lg-5">{{this.project.tags.join(', ')}}</small>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
