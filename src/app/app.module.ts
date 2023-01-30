@@ -11,10 +11,11 @@ import { DreamloJsComponent } from './project-details/dreamlo.js/dreamlo.js.comp
 import { WorkWithMeHereComponent } from './project-details/work-with-me-here/work-with-me-here.component';
 import { TagMenuComponent } from './tag-menu/tag-menu.component';
 import { TagComponent } from './shared/tag/tag.component';
+import { HomeComponent } from './home/home.component';
 import { ProjectListComponent } from './shared/project-list/project-list.component';
 
 const appRoutes: Routes = [
-  { path: '', component: WorkWithMeHereComponent },
+  { path: '', component: HomeComponent },
   { path: 'tags/:tag', component: TagMenuComponent },
   { path: 'dtree-seed', component: DtreeSeedComponent },
   { path: 'picsofus', component: PicsOfUsComponent },
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
     WorkWithMeHereComponent,
     TagMenuComponent,
     TagComponent,
+    HomeComponent,
     ProjectListComponent
   ],
   imports: [
