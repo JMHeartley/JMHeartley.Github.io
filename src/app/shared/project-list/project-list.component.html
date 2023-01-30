@@ -3,9 +3,9 @@
         class="row g-0 my-3 border border-2 border-secondary border-hover-white rounded-3 text-reset text-decoration-none"
         [routerLink]="project.absoluteUrl">
         <img [src]="project.bannerFilePath" [alt]="project.bannerAltText"
-            class="image-fluid rounded col col-sm-4 col-lg-5">
+            class="image-fluid rounded col col-sm-4 col-lg-3">
         <div class="col d-flex flex-column px-3 px-md-4 pt-2 pb-1">
-            <p class="lead flex-grow-1 fs-lg-4">{{project.description}}</p>
+            <p class="lead flex-grow-1 fs-lg-4 fs-xxl-3">{{project.description}}</p>
             <small class="text-muted fs-lg-5" [innerHTML]="this.tagFilter
                 ? project.tags.join(', ').replace(this.tagFilter, '<em>' + this.tagFilter + '</em>')
                 : project.tags.join(', ')"></small>
