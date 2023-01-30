@@ -11,6 +11,7 @@ import { DreamloJsComponent } from './project-details/dreamlo.js/dreamlo.js.comp
 import { WorkWithMeHereComponent } from './project-details/work-with-me-here/work-with-me-here.component';
 import { TagMenuComponent } from './tag-menu/tag-menu.component';
 import { TagComponent } from './shared/tag/tag.component';
+import { ProjectListComponent } from './shared/project-list/project-list.component';
 
 const appRoutes: Routes = [
   { path: '', component: WorkWithMeHereComponent },
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     DreamloJsComponent,
     WorkWithMeHereComponent,
     TagMenuComponent,
-    TagComponent
+    TagComponent,
+    ProjectListComponent
   ],
   imports: [
     BrowserModule,
