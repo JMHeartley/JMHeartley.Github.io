@@ -2,6 +2,24 @@
    Extra small devices (portrait phones, less than 576px)
    No media query since this is the default in Bootstrap 
 */
+:root {
+    --theme-special-color: #50B8B6;
+    --theme-light-color: #FFFFFF;
+    --theme-dark-color: #12141A;
+    --theme-link-color: #1A8893;
+    --theme-header-color: #89D7CB;
+    --theme-link-hover-text-shadow: 0 0 0.25rem var(--theme-link-color);
+    --theme-card-hover-drop-shadow: 0 0 6rem 1rem var(--theme-link-color);
+}
+
+.bg-theme-dark {
+    background-color: var(--theme-dark-color) !important;
+}
+
+.text-theme-light {
+    color: var(--theme-light-color) !important;
+}
+
 .max-vh-100 {
     max-height: 100vh !important;
 }
