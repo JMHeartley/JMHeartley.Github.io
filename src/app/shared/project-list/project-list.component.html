@@ -1,6 +1,6 @@
 <div class="row p-3">
     <a *ngFor="let project of this.projectsWithMatchingTag"
-        class="row g-0 my-3 text-reset text-decoration-none theme-card rounded overflow-hidden col-lg-10 offset-lg-1"
+        class="row g-0 my-3 text-reset text-decoration-none theme-card rounded overflow-hidden col-10 offset-1 col-md-12 offset-md-0 col-lg-10 offset-lg-1"
         [routerLink]="project.absoluteUrl">
         <img [src]="project.bannerFilePath" [alt]="project.bannerAltText" class="image-fluid col col-sm-4">
         <div class="col d-flex flex-column px-3 py-2">
