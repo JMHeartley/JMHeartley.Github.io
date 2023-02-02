@@ -12,7 +12,7 @@
     --theme-drop-shadow: 0 0 1.5rem 0.25rem var(--theme-teal-light);
 }
 
-.bg-theme-dark {
+.theme-bg-dark {
     background-color: var(--theme-dark) !important;
 }
 
@@ -41,11 +41,11 @@
     color: var(--theme-teal-dark) !important;
 }
 
-.text-theme-light {
+.theme-text-light {
     color: var(--theme-light) !important;
 }
 
-.text-theme-special {
+.theme-text-special {
     color: var(--theme-teal-medium) !important;
 }
 
