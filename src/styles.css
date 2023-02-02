@@ -9,11 +9,36 @@
     --theme-light: #FFFFFF;
     --theme-dark: #12141A;
     --theme-text-shadow: 0 0 0.25rem var(--theme-teal-dark);
-    --theme-drop-shadow: 0 0 6rem 1rem var(--theme-teal-light);
+    --theme-drop-shadow: 0 0 1.5rem 0.25rem var(--theme-teal-light);
 }
 
 .bg-theme-dark {
     background-color: var(--theme-dark) !important;
+}
+
+.theme-card {
+    background-color: var(--theme-teal-dark) !important;
+}
+
+.theme-card:hover {
+    background-color: var(--theme-teal-light) !important;
+    box-shadow: var(--theme-drop-shadow);
+}
+
+.theme-card p {
+    color: var(--theme-light) !important;
+}
+
+.theme-card:hover p {
+    color: var(--theme-dark) !important;
+}
+
+.theme-card small {
+    color: var(--theme-teal-light) !important;
+}
+
+.theme-card:hover small {
+    color: var(--theme-teal-dark) !important;
 }
 
 .text-theme-light {
@@ -44,10 +69,6 @@
 
 .text-hover-white:hover {
     color: #fff !important;
-}
-
-.border-hover-white:hover {
-    border-color: #fff !important;
 }
 
 .image-fluid {
