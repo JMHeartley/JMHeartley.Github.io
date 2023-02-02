@@ -3,25 +3,25 @@
    No media query since this is the default in Bootstrap 
 */
 :root {
-    --theme-special-color: #50B8B6;
-    --theme-light-color: #FFFFFF;
-    --theme-dark-color: #12141A;
-    --theme-link-color: #1A8893;
-    --theme-header-color: #89D7CB;
-    --theme-link-hover-text-shadow: 0 0 0.25rem var(--theme-link-color);
-    --theme-card-hover-drop-shadow: 0 0 6rem 1rem var(--theme-link-color);
+    --theme-teal-light: #89D7CB;
+    --theme-teal-medium: #50B8B6;
+    --theme-teal-dark: #1A8893;
+    --theme-light: #FFFFFF;
+    --theme-dark: #12141A;
+    --theme-text-shadow: 0 0 0.25rem var(--theme-teal-dark);
+    --theme-drop-shadow: 0 0 6rem 1rem var(--theme-teal-light);
 }
 
 .bg-theme-dark {
-    background-color: var(--theme-dark-color) !important;
+    background-color: var(--theme-dark) !important;
 }
 
 .text-theme-light {
-    color: var(--theme-light-color) !important;
+    color: var(--theme-light) !important;
 }
 
 .text-theme-special {
-    color: var(--theme-special-color) !important;
+    color: var(--theme-teal-medium) !important;
 }
 
 .bg-mountains-1 {
