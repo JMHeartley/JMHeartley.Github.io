@@ -4,8 +4,8 @@
         [routerLink]="project.absoluteUrl">
         <img [src]="project.bannerFilePath" [alt]="project.bannerAltText" class="image-fluid col col-sm-4">
         <div class="col d-flex flex-column px-3 py-2">
-            <p class="flex-grow-1 fs-sm-5 fs-lg-4 fs-xxl-3">{{project.description}}</p>
-            <small class="fs-lg-5" [innerHTML]="this.tagFilter
+            <p class="flex-grow-1 fs-sm-5 fs-xxl-4">{{project.description}}</p>
+            <small class="fs-lg-6" [innerHTML]="this.tagFilter
                 ? project.tags.join(', ').replace(this.tagFilter, '<em>' + this.tagFilter + '</em>')
                 : project.tags.join(', ')"></small>
         </div>
