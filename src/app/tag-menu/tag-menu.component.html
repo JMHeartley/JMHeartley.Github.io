@@ -1,7 +1,15 @@
 <div class="d-flex flex-column vh-100 max-vh-100">
     <div class="bg-mountains-1"></div>
-    <div class="py-3">
-        <h3 class="text-center">Projects with <em>{{this.tag}}</em> tag:</h3>
+    <div class="container">
+        <app-navigation></app-navigation>
+    </div>
+    <div class="py-1">
+        <h3 class="text-center">
+            Projects
+            <span *ngIf="this.tag">
+                with <em>{{this.tag}}</em> tag
+            </span>
+        </h3>
     </div>
     <div class="container overflow-auto overflow-lg-hidden scrollbar-hidden">
         <app-project-list [tagFilter]="this.tag"></app-project-list>

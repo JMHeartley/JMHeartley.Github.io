@@ -17,6 +17,7 @@ import { ProjectListComponent } from './shared/project-list/project-list.compone
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'tags/:tag', component: TagMenuComponent },
+  { path: 'projects', component: TagMenuComponent },
   { path: 'dtree-seed', component: DtreeSeedComponent },
   { path: 'picsofus', component: PicsOfUsComponent },
   { path: 'dreamlo.js', component: DreamloJsComponent },
