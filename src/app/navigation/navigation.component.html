@@ -1,26 +1,27 @@
-<div class="py-3 fs-2 d-flex justify-content-evenly align-items-center">
-    <a routerLink="/" routerLinkActive="pb-3" [routerLinkActiveOptions]="{exact: true}" class="text-decoration-none"
-        data-bs-toggle="tooltip" data-bs-placement="top" title="Home">
-        <img src="assets/img/house.png" alt="house emoji" class="img-fluid" style="height: 3rem;">
-    </a>
-    <a routerLink="/dtree-seed" routerLinkActive="pb-3" class="text-decoration-none" data-bs-toggle="tooltip"
-        data-bs-placement="top" title="dTree-Seed">
-        <img src="assets/img/chestnut.png" alt="seed emoji" class="img-fluid" style="height: 3rem;">
-    </a>
-    <a routerLink="/picsofus" routerLinkActive="pb-3" class="text-decoration-none" data-bs-toggle="tooltip"
-        data-bs-placement="top" title="PicsOfUs">
-        <img src="assets/img/framed-picture.png" alt="framed picture emoji" class="img-fluid" style="height: 3rem;">
-    </a>
-    <a routerLink="/dreamlo.js" routerLinkActive="pb-3" class="text-decoration-none" data-bs-toggle="tooltip"
-        data-bs-placement="top" title="dreamlo.js">
-        <img src="assets/img/trophy.png" alt="trophy emoji" class="img-fluid" style="height: 3rem;">
-    </a>
-    <a routerLink="/work-with-me-here" routerLinkActive="pb-3" class="text-decoration-none" data-bs-toggle="tooltip"
-        data-bs-placement="top" title="Work With Me Here">
-        <img src="assets/img/dog.png" alt="dog emoji" class="img-fluid" style="height: 3rem;">
-    </a>
-    <a routerLink="/meet-justin" routerLinkActive="pb-3" class="text-decoration-none" data-bs-toggle="tooltip"
-        data-bs-placement="top" title="Meet Justin">
-        <img src="assets/img/justin-emoji.png" alt="Justin as an emoji" class="img-fluid" style="height: 3rem;">
-    </a>
-</div>
+<nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+        <a class="navbar-brand theme-link-special fw-bold" routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">Justin's Portfol.io</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars theme-link"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto text-center">
+                <li class="nav-item my-3 my-md-0 ms-md-3">
+                    <a class="nav-link theme-link" aria-current="page" routerLink="/projects"
+                        routerLinkActive="active">Projects</a>
+                </li>
+                <li class="nav-item my-3 my-md-0 ms-md-3">
+                    <a class="nav-link theme-link" routerLink="/about" routerLinkActive="active">About</a>
+                </li>
+                <li class="nav-item my-3 my-md-0 ms-md-3">
+                    <a class="nav-link theme-link" routerLink="/resume" routerLinkActive="active">Resume</a>
+                </li>
+                <li class="nav-item my-3 my-md-0 ms-md-3">
+                    <a class="btn theme-btn" routerLink="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
