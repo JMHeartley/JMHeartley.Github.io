@@ -6,7 +6,7 @@ import { Project } from "src/app/shared/project.model";
   templateUrl: './dtree-seed.component.html'
 })
 export class DtreeSeedComponent implements Project {
-  absoluteUrl = '/dtree-seed';
+  absoluteUrl = '/projects/dtree-seed';
   bannerFilePath = 'assets/img/dtree-seed/main.png';
   bannerAltText = 'dTree-Seed logo';
   description = 'A library for converting a list of objects into a hierarchical data structure for dTree.';

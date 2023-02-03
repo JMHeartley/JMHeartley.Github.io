@@ -6,7 +6,7 @@ import { Project } from "src/app/shared/project.model";
   templateUrl: './work-with-me-here.component.html'
 })
 export class WorkWithMeHereComponent implements Project {
-  absoluteUrl = '/work-with-me-here';
+  absoluteUrl = '/projects/work-with-me-here';
   bannerFilePath = 'assets/img/work-with-me-here/main.png';
   bannerAltText = 'Screenshot of the Work With Me Here main menu';
   description = 'A game where you try to keep up with your dog while working from home; takes place during the 2020 pandemic lockdown.';

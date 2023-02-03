@@ -16,12 +16,11 @@ import { ProjectListComponent } from './shared/project-list/project-list.compone
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'tags/:tag', component: TagMenuComponent },
   { path: 'projects', component: TagMenuComponent },
-  { path: 'dtree-seed', component: DtreeSeedComponent },
-  { path: 'picsofus', component: PicsOfUsComponent },
-  { path: 'dreamlo.js', component: DreamloJsComponent },
-  { path: 'work-with-me-here', component: WorkWithMeHereComponent }
+  { path: 'projects/tags/:tag', component: TagMenuComponent },
+  { path: 'projects/dtree-seed', component: DtreeSeedComponent },
+  { path: 'projects/picsofus', component: PicsOfUsComponent },
+  { path: 'projects/dreamlo.js', component: DreamloJsComponent },
 ];
 
 @NgModule({
