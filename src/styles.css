@@ -75,6 +75,10 @@
     color: var(--theme-teal-medium) !important;
 }
 
+.theme-text-header {
+    color: var(--theme-teal-light) !important;
+}
+
 .bg-mountains-1 {
     background-image: url(assets/img/mountains-1.png) !important;
     background-repeat: no-repeat;
