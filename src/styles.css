@@ -8,8 +8,8 @@
     --theme-teal-dark: #1A8893;
     --theme-light: #FFFFFF;
     --theme-dark: #12141A;
-    --theme-text-shadow: 0 0 0.25rem var(--theme-teal-dark);
-    --theme-drop-shadow: 0 0 1.5rem 0.25rem var(--theme-teal-light);
+    --theme-drop-shadow: 0 0 0.5rem var(--theme-teal-light);
+    --theme-box-shadow: 0 0 1.5rem 0.25rem var(--theme-teal-light);
 }
 
 .theme-bg-dark {
@@ -22,7 +22,7 @@
 
 .theme-card:hover {
     background-color: var(--theme-teal-light) !important;
-    box-shadow: var(--theme-drop-shadow);
+    box-shadow: var(--theme-box-shadow) !important;
 }
 
 .theme-card p {
@@ -53,7 +53,7 @@
 .theme-link-special:hover,
 .theme-link.active {
     color: var(--theme-teal-light) !important;
-    text-shadow: var(--theme-text-shadow) !important;
+    filter: drop-shadow(var(--theme-drop-shadow)) !important;
 }
 
 .theme-btn {
@@ -61,9 +61,10 @@
     color: var(--theme-light) !important;
 }
 
-.theme-btn:hover {
+.theme-btn:hover,
+.theme-btn.active {
     background-color: var(--theme-teal-light) !important;
-    box-shadow: var(--theme-drop-shadow);
+    filter: drop-shadow(var(--theme-drop-shadow)) !important;
     color: var(--theme-dark) !important;
 }
 
