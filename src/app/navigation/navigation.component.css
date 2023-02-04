@@ -1,0 +1,51 @@
+.navbar-brand,
+.navbar-toggler {
+    z-index: 99;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media (max-width: 767.99px) {
+    .navbar .navbar-collapse {
+        background: rgba(18, 20, 26, 0.95);
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: opacity 0.35s ease-out;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar .navbar-collapse.collapse {
+        display: flex;
+        opacity: 0;
+        pointer-events: none
+    }
+
+    .navbar .navbar-collapse.collapsing[style*="height"] {
+        opacity: 1;
+        height: 100vh !important
+    }
+
+    .navbar .navbar-collapse.collapsing {
+        opacity: 0;
+        height: 100vh
+    }
+
+    .navbar .navbar-collapse.collapse.show {
+        opacity: 1;
+        pointer-events: auto
+    }
+
+    .navbar .navbar-collapse .navbar-nav {
+        margin-top: auto;
+        margin-right: initial !important;
+        margin-left: initial !important;
+        margin-bottom: auto
+    }
+}
