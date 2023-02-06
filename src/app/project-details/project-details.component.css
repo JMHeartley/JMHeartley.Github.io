@@ -28,11 +28,13 @@
 .gutter-image-left {
     left: 0;
     object-position: left top;
+    padding-right: 1vw;
 }
 
 .gutter-image-right {
     right: 0;
     object-position: right top;
+    padding-left: 1vw;
 }
 
 /* Small devices (landscape phones, 576px and up) */
