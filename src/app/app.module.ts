@@ -13,6 +13,7 @@ import { TagMenuComponent } from './tag-menu/tag-menu.component';
 import { TagComponent } from './shared/tag/tag.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectListComponent } from './shared/project-list/project-list.component';
+import { ProjectDetailsSectionComponent } from './project-details/project-details-section/project-details-section.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
     TagMenuComponent,
     TagComponent,
     HomeComponent,
-    ProjectListComponent
+    ProjectListComponent,
+    ProjectDetailsSectionComponent
   ],
   imports: [
     BrowserModule,
