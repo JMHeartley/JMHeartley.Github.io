@@ -2,6 +2,20 @@
    Extra small devices (portrait phones, less than 576px)
    No media query since this is the default in Bootstrap 
 */
+.gutter-image-top {
+    object-position: center top;
+}
+
+.gutter-image-bottom {
+    object-position: center center;
+}
+
+.gutter-image-top,
+.gutter-image-bottom {
+    object-fit: cover;
+    height: 5vh;
+}
+
 .gutter-image-left,
 .gutter-image-right {
     object-fit: cover;
