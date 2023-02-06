@@ -1,0 +1,72 @@
+/* 
+   Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in Bootstrap 
+*/
+.gutter-image-left,
+.gutter-image-right {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.gutter-image-left {
+    left: 0;
+    object-position: left top;
+}
+
+.gutter-image-right {
+    right: 0;
+    object-position: right top;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+    .gutter-image-left,
+    .gutter-image-right {
+        /* 540px is the max width of a container at this breakpoint*/
+        width: calc((100% - 540px) / 2);
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    .gutter-image-left,
+    .gutter-image-right {
+        /* 720px is the max width of a container at this breakpoint*/
+        width: calc((100% - 720px) / 2);
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    .gutter-image-left,
+    .gutter-image-right {
+        /* 960px is the max width of a container at this breakpoint*/
+        width: calc((100% - 960px) / 2);
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    .gutter-image-left,
+    .gutter-image-right {
+        /* 1140px is the max width of a container at this breakpoint*/
+        width: calc((100% - 1140px) / 2);
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1400px) {
+
+    .gutter-image-left,
+    .gutter-image-right {
+        /* 1320px is the max width of a container at this breakpoint*/
+        width: calc((100% - 1320px) / 2);
+    }
+}
