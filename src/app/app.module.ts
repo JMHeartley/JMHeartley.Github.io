@@ -22,6 +22,7 @@ const appRoutes: Routes = [
   { path: 'projects/dtree-seed', component: DtreeSeedComponent },
   { path: 'projects/picsofus', component: PicsOfUsComponent },
   { path: 'projects/dreamlo.js', component: DreamloJsComponent },
+  { path: 'projects/work-with-me-here', component: WorkWithMeHereComponent }
 ];
 
 @NgModule({
