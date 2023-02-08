@@ -1,27 +1,134 @@
 <app-project-details [imageSrc]="this.bannerFilePath" [imageAlt]="this.bannerAltText" [tags]="this.tags"
     githubUrl="https://github.com/JMHeartley/dreamlo.js" npmUrl="https://www.npmjs.com/package/dreamlo.js"
     demoUrl="https://jmheartley.github.io/dreamlo.js/">
-    <ul class="fs-4">
-        <li class="pb-4">dreamlo.js is a library for creating, retreiving, updating, and deleting scores from a dreamlo
-            leaderboard
-        </li>
-        <li class="pb-4">dreamlo UI allows anyone to use dreamlo.js without having any of the implementation logic in
-            place
-        </li>
-    </ul>
-    <p class="text-center fst-italic px-5">
-        <a href="https://github.com/JMHeartley/dreamlo.js#readme" target="_blank"
-            class="text-secondary text-hover-white text-decoration-none">
-            Check out the documentation on GitHub for a detailed explanation and breakdown.
-        </a>
-    </p>
-    <div class="text-center pt-5">
-        <h5>Can you climb to the top?</h5>
-        <a href="https://jmheartley.github.io/Tic-Tac-Toe/" target="_blank"
-            class="text-secondary text-hover-white text-decoration-none fw-bold">
-            <p class="px-2">Using dreamlo.js, I added a leaderboard to an old tic-tac-toe project of mine for
-                consecutive wins against the CPU. Can you beat my high score?</p>
-        </a>
-        <img src="assets/img/dreamlo.js/tic-tac-toe.png" alt="Let's Play Some Tic-Tac-Toe!" class="img-fluid rounded">
-    </div>
+    <app-project-details-section headerText="Features" imageSrc="assets/img/dreamlo.js/dreamlo UI.png"
+        imageAlt="A screenshot of dreamlo UI">
+        <ul>
+            <li>
+                Create, retrieve, update, and delete scores from a specified leaderboard via HTTP requests to dreamlo's
+                API.
+            </li>
+            <li>
+                Return scores in various sort orders and formats, including Javascript objects, JSON, XML,
+                pipe-delimited, and quoted with comma separators.
+            </li>
+            <li>
+                Optionally skip over scores to serve as in separate paginated sections, saving memory.
+            </li>
+            <li>
+                Ships with dreamlo UI, a simple interface allows you to test/debug your leaderboard without writing any
+                code.
+            </li>
+        </ul>
+    </app-project-details-section>
+    <app-project-details-section headerText="Purpose and Goal">
+        <p>
+            dreamlo is a website for adding leaderboards to games for free. I've previously used its Unity game asset
+            for Work With Me Here. Later, I revisited an old TicTacToe game I made while learning how to code, to see
+            how my coding style has changed over time; then, I thought, "What would be a good way to add a leaderboard
+            to these types of games?" The first thing that came to mind was dreamlo.
+        </p>
+        <p>
+            My goal was to create an easy-to-integrate script containing all the functionality dreamlo offers and host
+            it as open-source so others may also take advantage of this free tool. An HTML game is often one of a
+            beginner's first programs; I wanted dreamlo.js to be as easy to use as possible for someone to extend their
+            game because I know the excitement of creating something.
+        </p>
+    </app-project-details-section>
+    <app-project-details-section headerText="" imageSrc="assets/img/dreamlo.js/tic-tac-toe.png"
+        imageAlt="Let's Play Some Tic-Tac-Toe!">
+        <h5 class="fst-italic">Can you climb to the top?</h5>
+        <p>
+            Using dreamlo.js, I added a leaderboard to that old tic-tac-toe project of mine for
+            consecutive wins against the CPU. Can you beat my high score?
+
+            <span class="text-center py-4 d-block">
+                <a href="https://jmheartley.github.io/Tic-Tac-Toe/" target="_blank"
+                    class="btn theme-btn text-decoration-none">
+                    Play Now
+                </a>
+            </span>
+        </p>
+    </app-project-details-section>
+    <app-project-details-section headerText="Problems and Solutions">
+        <p>
+            In the beginning, it seemed straightforward; all I had to do was make a Javascript wrapper for dreamlo's
+            requests, but I ended up with more than just that.
+        </p>
+        <p>
+            Implementing the basic methods was simple because I had dreamlo's developer page to guide me. However,
+            during testing, I discovered dreamlo itself had bugs that I needed to compensate for:
+        </p>
+        <ul>
+            <li>
+                Retrieving a single score using a name, if no scores had that name, dreamlo would return all scores
+                instead of an empty result.
+                <a href="https://github.com/JMHeartley/dreamlo.js/commit/0035a909fdeed2d541aeb57ce294fafc860b0e5e"
+                    target="_blank" class="theme-link text-decoration-none">
+                    This issue only affected the JSON, XML, and Quoted with comma formats; pipe-delimited scores seemed
+                    to function normally.
+                </a>
+            </li>
+            <li>
+                Retrieving multiple scores using the JSON format, the returned data would be different types when there
+                were no scores, one or numerous scores.
+                <a href="https://github.com/JMHeartley/dreamlo.js/commit/3db10c01d79055b35d2c6f21dd4b369f3fe7d27a"
+                    target="_blank" class="theme-link text-decoration-none">
+                    I had to implement a fix to enforce data was always in an array to keep it consistent.
+                </a>
+            </li>
+        </ul>
+        <p>
+            Since this script is in Javascript, I decided to extend the number of formats by one to include an option to
+            have scores returned as objects. I manipulated the JSON format to make this possible.
+        </p>
+        <p>
+            After I finished the script, I had another monster to contend with, writing the documentation. I broke up
+            the information in a digestible way, providing relevant links to outside documentation if the reader isn't
+            familiar with a concept. In the end, it took
+            <a href="https://github.com/JMHeartley/dreamlo.js/commits/main/README.md" target="_blank"
+                class="theme-link text-decoration-none">
+                45 commits
+            </a>
+            to get the README to a level I was satisfied with.
+        </p>
+        <p>
+            I spent two weeks working on a Swagger UI-inspired demo page for debugging purposes. I wanted someone to
+            check out dreamlo.js before integrating it or debugging their leaderboard to see if it, or their project,
+            was the cause of an issue.
+        </p>
+    </app-project-details-section>
+    <app-project-details-section headerText="Tech Stack">
+        <p>
+            I decided to use Typescript for this project. Its statically-typed nature is more familiar to me, having
+            written primarily C# in the past. Ultimately, it saved me time, unlike if I used dynamically-typed
+            JavaScript, where I would only realize type errors at run-time.
+        </p>
+        <p>
+            For dreamlo UI, I used Bootstrap to get me off the ground in terms of design quickly. Where necessary, I
+            used CSS classes that mimicked Bootstrap to customize styles to achieve a look that's a cross between
+            Swagger UI and dreamlo's official site design.
+        </p>
+    </app-project-details-section>
+    <app-project-details-section headerText="Final Thoughts" imageSrc="assets/img/dreamlo.js/commits.png"
+        imageAlt="A screenshot of GitHub commits">
+        <p>
+            I'm very proud of dreamlo.js. I'm happy that I could contribute to the open-source community, which has
+            helped me with so many free libraries in my projects.
+            I got much more comfortable with Typescript, which was great practice. I prefer Typescript over vanilla
+            Javascript now!
+        </p>
+        <p>
+            Throughout this project, my source code commits became much cleaner and more descriptive, which helped me
+            track down changes much faster.
+        </p>
+    </app-project-details-section>
+    <app-project-details-section>
+        <p class="text-center fst-italic">
+            <a href="https://github.com/JMHeartley/dreamlo.js#readme" target="_blank"
+                class="theme-link text-decoration-none">
+                Check out the documentation on GitHub for a detailed explanation of dreamlo.js' usage and requirements.
+            </a>
+        </p>
+    </app-project-details-section>
 </app-project-details>
