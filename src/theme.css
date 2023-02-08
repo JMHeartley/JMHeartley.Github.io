@@ -1,8 +1,8 @@
 :root {
     --theme-teal-light: #89D7CB;
-    --theme-teal-medium: #50B8B6;
-    --theme-teal-dark: #1A8893;
+    --theme-teal-dark: #50B8B6;
     --theme-light: #FFFFFF;
+    --theme-gray: #E5E5E5;
     --theme-dark: #12141A;
     --theme-drop-shadow: 0 0 0.5rem var(--theme-teal-light);
     --theme-box-shadow: 0 0 1.5rem 0.25rem var(--theme-teal-light);
@@ -42,7 +42,7 @@
 }
 
 .theme-link-special {
-    color: var(--theme-teal-medium) !important;
+    color: var(--theme-teal-light) !important;
 }
 
 .theme-link:hover,
@@ -81,16 +81,16 @@
 }
 
 .theme-text {
-    color: var(--theme-light) !important;
+    color: var(--theme-gray) !important;
     font-size: 1.125rem !important;
 }
 
 .theme-special {
-    color: var(--theme-teal-medium) !important;
+    color: var(--theme-teal-light) !important;
 }
 
 .theme-header {
-    color: var(--theme-teal-light) !important;
+    color: var(--theme-light) !important;
     margin-bottom: 1rem !important;
 }
 
