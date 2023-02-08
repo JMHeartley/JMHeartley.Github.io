@@ -64,14 +64,24 @@
     color: var(--theme-dark) !important;
 }
 
-.theme-text-light {
+.theme-text {
     color: var(--theme-light) !important;
+    font-size: 1.125rem !important;
 }
 
-.theme-text-special {
+.theme-special {
     color: var(--theme-teal-medium) !important;
 }
 
 .theme-header {
     color: var(--theme-teal-light) !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    .theme-text {
+        font-size: 1rem !important;
+    }
 }
