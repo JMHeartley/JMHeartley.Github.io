@@ -12,10 +12,10 @@ import { Project } from "../project.model";
 export class ProjectListComponent implements OnInit, OnChanges {
   @Input() tagFilter: string;
   allProjects: Project[] = [
-    new DtreeSeedComponent,
+    new WorkWithMeHereComponent,
     new PicsOfUsComponent,
-    new DreamloJsComponent,
-    new WorkWithMeHereComponent
+    new DtreeSeedComponent,
+    new DreamloJsComponent
   ];
   projectsWithMatchingTag: Project[];
 
