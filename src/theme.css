@@ -64,6 +64,22 @@
     color: var(--theme-dark) !important;
 }
 
+.theme-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.theme-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -webkit-box-shadow: inset var(--theme-drop-shadow);
+    background-color: var(--theme-teal-dark);
+}
+
+.theme-scrollbar::-webkit-scrollbar-thumb:hover,
+.theme-scrollbar::-webkit-scrollbar-thumb:active {
+    box-shadow: var(--theme-drop-shadow);
+    background-color: var(--theme-teal-light);
+}
+
 .theme-text {
     color: var(--theme-light) !important;
     font-size: 1.125rem !important;
