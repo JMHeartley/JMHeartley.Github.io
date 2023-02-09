@@ -15,14 +15,15 @@
                 <img src="{{this.imageSrc}}" alt="{{this.imageAlt}}" class="img-fluid col-12">
                 <div class="col-12 row mx-0 text-center">
                     <div class="col-10 offset-1 col-md-12 offset-md-0 pt-4">
-                        <h5 class="theme-header d-none d-md-block">Tags</h5>
+                        <h5 *ngIf="this.githubUrl || this.npmUrl || this.demoUrl"
+                            class="theme-header d-none d-md-block">Tags</h5>
                         <div class="d-flex flex-wrap justify-content-center align-items-center">
                             <app-tag *ngFor="let tag of this.tags; index as index" [tag]="tag"
                                 [text]="index === this.tags.length - 1 ? tag : tag + ','"></app-tag>
                         </div>
                     </div>
                     <div class="col-8 offset-2 col-md-12 offset-md-0 pt-4">
-                        <h5 class="theme-header d-none d-md-block">Links</h5>
+                        <h5 *ngIf="this.tags.length > 0" class="theme-header d-none d-md-block">Links</h5>
                         <div class="d-flex justify-content-evenly align-items-center">
                             <a *ngIf="this.githubUrl" href="{{this.githubUrl}}" target="_blank"
                                 class="theme-link text-decoration-none fs-3 py-1">
