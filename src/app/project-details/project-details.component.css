@@ -14,6 +14,11 @@
 .gutter-image-bottom {
     object-fit: cover;
     height: 8vh;
+    width: 100vw;
+    max-width: 100vw;
+    position: relative;
+    left: -1.5rem;
+    z-index: -1;
 }
 
 .gutter-image-left,
