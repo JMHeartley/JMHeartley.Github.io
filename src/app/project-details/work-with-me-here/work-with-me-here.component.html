@@ -1,30 +1,124 @@
 <app-project-details [imageSrc]="this.bannerFilePath" [imageAlt]="this.bannerAltText" [tags]="this.tags"
     githubUrl="https://github.com/JMHeartley/Work-With-Me-Here"
     demoUrl="https://jmheartley.itch.io/work-with-me-here-full-game">
-    <ul class="fs-4">
-        <li class="pb-4">A short game about working from home while trying to keep your excited dog at bay; takes place
-            during the 2020 pandemic lockdown</li>
-        <li class="pb-4">Created during a game jam by Team Toffee (named after the dog), of which I was
-            the programmer</li>
-        <li class="pb-4">Browser games made with Unity don't usually work well with the browser I coded my way to a
-            solution</li>
-    </ul>
-    <p class="text-center fst-italic px-5">
-        <a href="https://github.com/JMHeartley/dreamlo.js#readme" target="_blank"
-            class="text-secondary text-hover-white text-decoration-none">
-            Want to check it out? Play it right now on itch.io
-        </a>
-    </p>
-    <div class="text-center pt-5">
+
+    <app-project-details-section headerText="About" [images]="[
+        {src: 'assets/img/work-with-me-here/emails.png', alt: 'Toffee unplugging your router'},
+        {src: 'assets/img/work-with-me-here/unplugging.png', alt: 'Toffee unplugging your router'},
+        {src: 'assets/img/work-with-me-here/no connection.png', alt: 'Toffee unplugging your router'}]">
         <p class="lead">
             Having to work at home during the pandemic isn't supposed to be exciting, but for Toffee the Dog it is!
             It means his owner will be home all day!
         </p>
-        <img src="assets/img/work-with-me-here/toffee.png" alt="Toffee the Dog" class="img-fluid rounded">
-        <p class="fst-italic fw-bold fs-5">
-            Maybe if I cause trouble Master will play with me...
-            <br>
-            I know! I'll chew on that wire he doesn't like me touching!
+        <div class="text-center py-4">
+            <img src="assets/img/work-with-me-here/toffee.png" alt="Toffee the Dog" class="img-fluid rounded">
+            <p class="fst-italic fw-bold" style="color: #ecbc7d;">
+                Maybe if I cause trouble Master will play with me...
+                <br>
+                I know! I'll chew on that wire he doesn't like me touching!
+            </p>
+        </div>
+        <p>
+            <strong>Work With Me Here</strong> is a short game about working from home while trying to keep your excited
+            dog at bay; takes place during the 2020 pandemic lockdown. It was created during a game jam by Team Toffee
+            (named after the dog), of which I was the programmer. It was made with the Unity game engine and written in
+            C#.
+            <span class="text-center py-4 pb-md-0 d-block">
+                <a href="https://jmheartley.itch.io/work-with-me-here-full-game" target="_blank" class="btn theme-btn">
+                    Play Now
+                </a>
+            </span>
         </p>
-    </div>
+    </app-project-details-section>
+    <app-project-details-section headerText="Features">
+        <ul>
+            <li>
+                <strong>Simple Controls</strong> - Use the mouse to move Toffee around the screen and click to interact
+                with objects.
+            </li>
+            <li>
+                <strong>Challenging Gameplay</strong> - Keep Toffee from chewing on the wires, unplugging the router,
+                and knocking over your laptop.
+            </li>
+            <li>
+                <strong>Leaderboard</strong> - Submit your name to the leaderboard to see how you stack up against other
+                players.
+            </li>
+            <li>
+                <strong>Mobile Support</strong> - The game is fully playable on mobile devices.
+            </li>
+        </ul>
+        <p>
+            I used the dreamlo asset to add a leaderboard. It's simple, free, and easy to implement.
+        </p>
+        <p>
+            I added lots more features, such as a tutorial, difficulty settings, score totaling and the end of a round,
+            and a leaderboard to submit your name upon all the player rankings.
+        </p>
+        <p>
+            While browser games made with Unity
+            don't usually work well on mobile devices, I coded my way to a solution.
+        </p>
+    </app-project-details-section>
+    <app-project-details-section headerText="Purpose and Goal"
+        imageSrc="assets/img/work-with-me-here/toffee sleeping.png">
+        <p>
+            Joining the GMTK 2020 game jam, I was excited to meet people with different skills and have fun making
+            something interesting. When the topic of the game jam was announced as “out of control”, my team
+            brainstormed to come up with an idea that would be unique and enjoyable.
+        </p>
+        <p>
+            We eventually settled on creating a game where your pet is out of control while you are working from home.
+            It was a great experience to work with talented people and make something creative while having fun at the
+            same time.
+        </p>
+    </app-project-details-section>
+    <app-project-details-section headerText="Finishing Twice">
+        <p>
+            As our 48 hours dwindled, we realized the features we originally wanted to add were too large in scope for
+            the time we had. We had a photo finish with a game stripped down of most of our idea, tied together with
+            duct tape and string using Game Maker 2. It works, just don't look at the code!
+        </p>
+        <p>
+            A few months passed, and I decided to remaster the game using the Unity engine for a year-end game jam,
+            Indie Lift 2020.
+        </p>
+    </app-project-details-section>
+    <app-project-details-section headerText="Lessons Learned" imageSrc="assets/img/work-with-me-here/finish.png">
+        <p>
+            While taking my time to remaster the game, I learned a lot about coding, and how to design software
+            with users in mind. Here's what I learned along the way:
+        <ul>
+            <li>
+                Explaining complex concepts, like how to play a game, is a lot harder than it seems unless you
+                <ul>
+                    <li>
+                        assume the reader will skim and plan accordingly
+                    </li>
+                    <li>
+                        use motion to capture attention
+                    </li>
+                    <li>
+                        group related items together using colors and proximity
+                    </li>
+                    <li>
+                        break down complex concepts into chunks so it's easier to digest
+                    </li>
+                    <li>
+                        use visual cues to help the reader understand
+                    </li>
+                </ul>
+            </li>
+            <li>
+                The only way to code fast is to code well, write code like
+                <a href="https://www.goodreads.com/quotes/7029841-clean-code-is-simple-and-direct-clean-code-reads-like"
+                    target="_blank" class="theme-text-link">
+                    well-written prose</a>
+                to avoid confusion while collaborating with others.
+            </li>
+            <li>
+                Commit code to source control frequently. I learned this the hard way!
+            </li>
+        </ul>
+    </app-project-details-section>
 </app-project-details>
