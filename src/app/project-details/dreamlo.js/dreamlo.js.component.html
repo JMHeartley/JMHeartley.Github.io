@@ -1,32 +1,48 @@
 <app-project-details [imageSrc]="this.bannerFilePath" [imageAlt]="this.bannerAltText" [tags]="this.tags"
     githubUrl="https://github.com/JMHeartley/dreamlo.js" npmUrl="https://www.npmjs.com/package/dreamlo.js"
     demoUrl="https://jmheartley.github.io/dreamlo.js/">
+    <app-project-details-section headerText="About">
+        <p>
+            <strong> dreamlo.js </strong> is a JavaScript library that allows you to quickly add a leaderboard to any
+            project. Create, retrieve, update, and delete scores from a leaderboard hosted on dreamlo.com.
+        </p>
+    </app-project-details-section>
     <app-project-details-section headerText="Features" imageSrc="assets/img/dreamlo.js/dreamlo UI.png"
         imageAlt="A screenshot of dreamlo UI">
         <ul>
             <li>
-                Create, retrieve, update, and delete scores from a specified leaderboard via HTTP requests to dreamlo's
-                API.
+                <strong>Simple to Implement</strong> - create, retrieve, update, and delete scores via HTTP requests
+                with minor set up work.
             </li>
             <li>
-                Return scores in various sort orders and formats, including Javascript objects, JSON, XML,
-                pipe-delimited, and quoted with comma separators.
+                <strong>Extensive Documentation</strong> - requirements, concepts, usage are documented with examples
+                and explanations on GitHub.
             </li>
             <li>
-                Optionally skip over scores to serve as in separate paginated sections, saving memory.
+                <strong>Easy to Test</strong> - ships with dreamlo UI, a simple interface allows you to test/debug your
+                leaderboard without writing any code.
             </li>
             <li>
-                Ships with dreamlo UI, a simple interface allows you to test/debug your leaderboard without writing any
-                code.
+                <strong>Customizable Return Data</strong> - return scores in various sort orders and formats, including
+                Javascript objects, JSON, XML, pipe-delimited, and double-quoted with comma separators.
+            </li>
+            <li>
+                <strong>Quick Pagination</strong> - skip over score rankings to serve in separate sections, saving
+                memory.
+            </li>
+            <li>
+                <strong>Open Source</strong> - peak at the source code, contribute, or fork the project on GitHub.
             </li>
         </ul>
     </app-project-details-section>
     <app-project-details-section headerText="Purpose and Goal">
         <p>
-            dreamlo is a website for adding leaderboards to games for free. I've previously used its Unity game asset
-            for Work With Me Here. Later, I revisited an old TicTacToe game I made while learning how to code, to see
-            how my coding style has changed over time; then, I thought, "What would be a good way to add a leaderboard
-            to these types of games?" The first thing that came to mind was dreamlo.
+            dreamlo is a website for adding leaderboards to games for free. I've used its Unity game asset for
+            <a routerLink="/projects/work-with-me-here" class="theme-text-link">
+                Work With Me Here</a>.
+            Later, I while an old TicTacToe game I made while learning how to code, to see how my coding style has
+            changed over time; then, I thought, "What would be a good way to add a leaderboard to these types of games?"
+            The first thing that came to mind was dreamlo.
         </p>
         <p>
             My goal was to create an easy-to-integrate script containing all the functionality dreamlo offers and host
@@ -42,7 +58,7 @@
             Using dreamlo.js, I added a leaderboard to that old tic-tac-toe project of mine for
             consecutive wins against the CPU. Can you beat my high score?
 
-            <span class="text-center py-4 d-block">
+            <span class="text-center py-4 pb-md-0 d-block">
                 <a href="https://jmheartley.github.io/Tic-Tac-Toe/" target="_blank"
                     class="btn theme-btn text-decoration-none">
                     Play Now
