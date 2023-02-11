@@ -8,4 +8,5 @@ export class ProjectDetailsSectionComponent {
   @Input() headerText: string;
   @Input() imageSrc: string;
   @Input() imageAlt: string;
+  @Input() images: { src: string, alt: string; }[];
 }
