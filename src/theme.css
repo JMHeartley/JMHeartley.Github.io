@@ -81,7 +81,7 @@
 .theme-text-link {
     text-decoration-color: var(--theme-teal-dark) !important;
     text-decoration-thickness: 0.125rem !important;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .theme-text-link:hover {
