@@ -1,18 +1,114 @@
 <app-project-details [imageSrc]="this.bannerFilePath" [imageAlt]="this.bannerAltText" [tags]="this.tags"
     githubUrl="https://github.com/JMHeartley/PicsOfUs">
-    <ul class="fs-4">
-        <li class="pb-4">A photo gallery only available to invited users</li>
-        <li class="pb-4">Uses Microsoft Azure's Face API for facial detection and recognition</li>
-        <li class="pb-4">Faces are used to create family members; fill in details to build/view family trees</li>
-    </ul>
-    <p class="text-center fst-italic px-5">
-        <a href="https://github.com/JMHeartley/PicsOfUs#readme" target="_blank"
-            class="text-secondary text-hover-white text-decoration-none">
-            Check out GitHub for background information and a detailed explanation of PicsOfUs.
-        </a>
-    </p>
-    <div class="text-center pt-5">
-        <h5>Architecture Breakdown</h5>
-        <img src="assets/img/picsofus/architecture.png" alt="PicsOfUs architecture diagram" class="img-fluid rounded">
-    </div>
+    <app-project-details-section headerText="About">
+        <p>
+            <strong>PicsOfUs</strong> is a photo gallery only available to invited users. It uses Microsoft Azure's Face
+            API for facial detection and recognition. Faces are used to create family members; fill in details to
+            build and view family trees.
+        </p>
+    </app-project-details-section>
+    <app-project-details-section headerText="Features">
+        <ul>
+            <li>
+                <strong>Photo gallery</strong> - the web application is a photo gallery that is only available to
+                invited users.
+            </li>
+            <li>
+                <strong>Face recognition</strong> - Microsoft Azure Face API is used to detect and recognize faces in
+                uploaded pics. The API is used to create family members and link existing family members to new pics.
+            </li>
+            <li>
+                <strong>Family trees</strong> - view family trees constructed from relationship data; clicking on any
+                node in the tree will display the person's details and pics.
+            </li>
+            <li>
+                <strong>Search</strong> - search for pics by selecting faces. The search results will display the pics
+                that contain the selected faces.
+            </li>
+            <li>
+                <strong>Responsive design</strong> - the web application is designed to be responsive and work on
+                desktops, tablets, and mobile devices.
+            </li>
+        </ul>
+    </app-project-details-section>
+    <app-project-details-section headerText="Architecture and Tech Stack"
+        imageSrc="assets/img/picsofus/architecture.png" imageAlt="Diagram of PicsOfUs' architecture">
+        <p>
+            PicsOfUs is a web application written in C# throughout its stack.
+        </p>
+        <ul>
+            <li>
+                <strong> Front-end</strong> - .NET 5 Blazor, Microsoft's single-page application technology, uses HTML,
+                CSS, Javascript, and C# to dynamically render web pages to the user.
+            </li>
+            <li>
+                <strong>Back-end</strong> - the Service/Repository pattern is used to separate business logic from data
+                access.
+                <ul>
+                    <li>
+                        <strong>Services</strong> - the Service layer is responsible for business logic and
+                        communication with external services. Written using C#, the asynchronous Service layer methods
+                        communicate with the Repository layer to access data.
+                        <div class="row py-3">
+                            <figure class="figure col-12 col-md-6 col-lg-4">
+                                <img src="assets/img/picsofus/PicService Diagram.png"
+                                    alt="PicsOfUs class diagram of PicService" class="figure-img img-fluid">
+                                <figcaption class="figure-caption text-center">A class diagram of PicService.
+                                </figcaption>
+                            </figure>
+                            <figure class="figure col-12 col-md-6 col-lg-4">
+                                <img src="assets/img/picsofus/MemberService Diagram.png"
+                                    alt="PicsOfUs class diagram of MemberService" class="figure-img img-fluid">
+                                <figcaption class="figure-caption text-center">A class diagram of MemberService.
+                                </figcaption>
+                            </figure>
+                            <figure class="figure col-12 col-md-6 col-lg-4">
+                                <img src="assets/img/picsofus/FaceService Diagram.png"
+                                    alt="PicsOfUs class diagram of FaceService" class="figure-img img-fluid">
+                                <figcaption class="figure-caption text-center">A class diagram of FaceService.
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Repositories</strong> - the Repository layer is responsible for data access and
+                        communication with the database. The database was designed using a code-first approach with
+                        Entity Framework Core 6, combining C#, LINQ, and EF Core 6. The SQL Server database is hosted on
+                        Microsoft Azure.
+                        <div class="row py-3">
+                            <figure class="figure col-12 col-md-8 offset-md-2">
+                                <img src="assets/img/picsofus/Database Diagram.png"
+                                    alt="PicsOfUs class diagram of PicService" class="figure-img img-fluid">
+                                <figcaption class="figure-caption text-center">A class diagram of the database models.
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Testing</strong> - the testing framework used is xUnit, with Moq used for mocking. The
+                testing layer is written in C#, uses EF Core 6 with SQLite for in-memory database access, and contains
+                over 100 unit tests.
+            </li>
+            <li>
+                <strong>External Services</strong> - Microsoft Azure Face API (facial recognition), Microsoft Azure
+                Computer Vision (to reject adult content), Microsoft Azure Virtual Machine (hosting platform), SendGrid
+                (email service)
+            </li>
+        </ul>
+    </app-project-details-section>
+    <!-- 
+        //TODO: background information/purpose and goals
+        //TODO: problems and solutions
+        //TODO: final thoughts
+    -->
+    <app-project-details-section>
+        <p class="text-center fst-italic">
+            <a href="https://github.com/JMHeartley/PicsOfUs#readme" target="_blank"
+                class="theme-link text-decoration-none">
+                Check out GitHub for a more background information and detailed explanation of PicsOfUs.
+            </a>
+        </p>
+    </app-project-details-section>
 </app-project-details>
