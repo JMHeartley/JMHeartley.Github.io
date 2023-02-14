@@ -23,7 +23,7 @@
 
 .gutter-image-left,
 .gutter-image-right {
-    object-fit: cover;
+    object-fit: none;
     position: absolute;
     top: 0;
     height: 100%;
