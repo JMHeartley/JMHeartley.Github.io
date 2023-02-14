@@ -7,8 +7,8 @@
             project. Create, retrieve, update, and delete scores from a leaderboard hosted on dreamlo.com.
         </p>
     </app-project-details-section>
-    <app-project-details-section headerText="Features" imageSrc="assets/img/dreamlo.js/dreamlo UI.png"
-        imageAlt="A screenshot of dreamlo UI">
+    <app-project-details-section headerText="Features"
+        [images]="[{src: 'assets/img/dreamlo.js/dreamlo UI.png', alt: 'A screenshot of dreamlo UI'}]">
         <ul>
             <li>
                 <strong>Simple to Implement</strong> - create, retrieve, update, and delete scores via HTTP requests
@@ -51,8 +51,8 @@
             game because I know the excitement of creating something.
         </p>
     </app-project-details-section>
-    <app-project-details-section headerText="" imageSrc="assets/img/dreamlo.js/tic-tac-toe.png"
-        imageAlt="Let's Play Some Tic-Tac-Toe!">
+    <app-project-details-section
+        [images]="[{src: 'assets/img/dreamlo.js/tic-tac-toe.png', alt: 'Let\'s play some Tic-Tac-Toe!'}]">
         <h5 class="fst-italic">Can you climb to the top?</h5>
         <p>
             Using dreamlo.js, I added a leaderboard to that old tic-tac-toe project of mine for
@@ -125,8 +125,8 @@
             Swagger UI and dreamlo's official site design.
         </p>
     </app-project-details-section>
-    <app-project-details-section headerText="Final Thoughts" imageSrc="assets/img/dreamlo.js/commits.png"
-        imageAlt="A screenshot of GitHub commits">
+    <app-project-details-section headerText="Final Thoughts"
+        [images]="[{src: 'assets/img/dreamlo.js/commits.png', alt: 'A screenshot of GitHub commits'}]">
         <p>
             I'm very proud of dreamlo.js. I'm happy that I could contribute to the open-source community, which has
             helped me with so many free libraries in my projects.

@@ -50,7 +50,7 @@
         </ul>
     </app-project-details-section>
     <app-project-details-section headerText="Purpose and Goal"
-        imageSrc="assets/img/work-with-me-here/toffee sleeping.png">
+        [images]="[{src: 'assets/img/work-with-me-here/toffee sleeping.png', alt: 'Toffee sleeping'}]">
         <p>
             Joining the GMTK 2020 game jam, I was excited to meet people with different skills and have fun making
             something interesting. When the topic of the game jam was announced as “out of control”, my team
@@ -73,7 +73,8 @@
             Indie Lift 2020.
         </p>
     </app-project-details-section>
-    <app-project-details-section headerText="Lessons Learned" imageSrc="assets/img/work-with-me-here/finish.png">
+    <app-project-details-section headerText="Lessons Learned"
+        [images]="[{src: 'assets/img/work-with-me-here/finish.png', alt: 'Work With Me Here\'s end game artwork'}]">
         <p>
             While taking my time to remaster the game, I learned a lot about coding, and how to design software
             with users in mind. Here's what I learned along the way:
