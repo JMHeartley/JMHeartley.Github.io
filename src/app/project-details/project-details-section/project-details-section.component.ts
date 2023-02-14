@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ProjectDetailsSectionComponent {
   @Input() headerText: string;
-  @Input() images: { src: string, alt: string; }[];
+  @Input() images: { src: string, alt: string; caption?: string; }[];
 }
