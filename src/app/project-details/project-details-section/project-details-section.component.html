@@ -5,7 +5,7 @@
             <ng-content></ng-content>
         </div>
         <div *ngIf="this.images" class="col-12 col-md-4">
-            <figure *ngFor="let image of this.images" class="figure mb-3">
+            <figure *ngFor="let image of this.images" class="figure w-100 mb-3">
                 <img [src]="image.src" [alt]="image.alt" class="figure-img image-fluid w-100 mb-1">
                 <figcaption *ngIf="image.caption" class="figure-caption theme-text text-center">{{image.caption}}
                 </figcaption>
