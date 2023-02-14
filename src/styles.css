@@ -21,10 +21,6 @@
     max-height: 100vh !important;
 }
 
-.text-hover-white:hover {
-    color: #fff !important;
-}
-
 .image-fluid {
     width: auto;
     height: auto;

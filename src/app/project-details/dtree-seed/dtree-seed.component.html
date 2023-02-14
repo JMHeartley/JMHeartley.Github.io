@@ -1,24 +1,161 @@
 <app-project-details [imageSrc]="this.bannerFilePath" [imageAlt]="this.bannerAltText" [tags]="this.tags"
     githubUrl="https://github.com/JMHeartley/dTree-Seed" npmUrl="https://www.npmjs.com/package/dtree-seed">
-    <ul class="fs-4">
-        <li class="pb-4">Converts a list of family members into a hierarchical family tree data structure</li>
-        <li class="pb-4">Dynamically carries over specified details</li>
-        <li class="pb-4">Serves as a pre-processor for dTree, a library for displaying family trees</li>
-    </ul>
-    <p class="text-center fst-italic px-5">
-        <a href="https://github.com/JMHeartley/dTree-Seed#readme" target="_blank"
-            class="text-secondary text-hover-white text-decoration-none">
-            Check out the documentation on GitHub for a detailed explanation and breakdown.
-        </a>
-    </p>
-    <div class="d-flex flex-column flex-md-row justify-content-between text-center pt-5">
-        <div class="flex-fill p-3">
-            <h5>Before</h5>
-            <img src="assets/img/dtree-seed/before.png" alt="Data before using dTree-Seed" class="img-fluid rounded">
+    <app-project-details-section headerText="About"
+        [images]="[
+    {src: 'assets/img/dtree-seed/before.png', alt: 'Data before using dTree-Seed', caption: 'data (before dTree-Seed)'},
+    {src: 'assets/img/dtree-seed/after.png', alt: 'Data after using dTree-Seed', caption: 'seededData (after dTree-Seed)'}]">
+        <p class="lead">
+            Structuring data for dTree is hard... but not anymore! Painlessly, with just one method call, you can:
+        </p>
+        <ul>
+            <li>
+                Filter data for the following objects:
+                <ul>
+                    <li>
+                        Target (the person whose family tree is being displayed)
+                    </li>
+                    <li>
+                        Target's parents (parents of target)
+                    </li>
+                    <li>
+                        Target's siblings (that share both parents)
+                    </li>
+                    <li>
+                        Target's children (where target is listed a parent)
+                    </li>
+                    <li>
+                        Target's spouses (where listed as other parent of a child)
+                    </li>
+                    <li>
+                        Target's descendents (grandchildren, children's spouses, great-grandchildren, etc.)
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Dynamically set CSS classes and custom render data for each node.
+            </li>
+            <li>
+                Return a hierarchical data structure, formatted as specified by dTree's README.
+            </li>
+        </ul>
+        <p>
+            <strong>dTree-Seed</strong> is a JavaScript library that converts a list of family members into a
+            hierarchical family tree data structure. It serves as a pre-processor for
+            <a href="https://github.com/ErikGartner/dTree#README" target="_blank" class="theme-text-link">
+                dTree</a>,
+            a library for displaying family trees.
+        </p>
+        <div class="py-3">
+            <pre class="bg-dark px-3">
+                <code>
+<span class="text-secondary">// just one method call</span>
+<span class="text-info">seededData</span> = dSeeder.<span class="text-warning">seed</span>(<span class="text-info">data</span>, <span class="text-info">targetId</span>);
+<span class="text-secondary">// then pass to dTree</span></code>
+dTree.<span class="text-warning">init</span>(<span class="text-info">seededData</span>);   
+                </pre>
         </div>
-        <div class="flex-fill p-3">
-            <h5>After</h5>
-            <img src="assets/img/dtree-seed/after.png" alt="Data after using dTree-Seed" class="img-fluid rounded">
-        </div>
-    </div>
+    </app-project-details-section>
+    <app-project-details-section headerText="Features">
+        <ul>
+            <li>
+                <strong>Simple to Implement</strong> - convert a list of family members into a hierarchical family tree
+                data structure with minor set up work.
+            </li>
+            <li>
+                <strong>Customizable</strong> - specify which details to carry over from the list of family members to
+                the hierarchical family tree data structure.
+            </li>
+            <li>
+                <strong>Extensive Documentation</strong> - dTree-Seed is well documented and has a comprehensive README.
+            </li>
+            <li>
+                <strong>Open Source</strong> - dTree-Seed is licensed under the MIT License, peak at the source code,
+                contribute, or fork the project on GitHub.
+            </li>
+            <li>
+                <strong>Lightweight</strong> - dTree-Seed is only 1.5 KB minified and gzipped.
+            </li>
+            <li>
+                <strong>Free</strong> - dTree-Seed is free to use and distribute.
+            </li>
+            <li>
+                <strong>Well Tested</strong> - dTree-Seed is well tested and has 100% code coverage.
+            </li>
+        </ul>
+    </app-project-details-section>
+    <app-project-details-section headerText="Purpose and Goal">
+        <p>
+            I used dTree when building
+            <a routerLink="/projects/picsofus" class="theme-text-link">
+                PicsOfUs</a>,
+            and found it to be a great tool that saved me a lot of time trying to
+            figure out how to display family trees.
+            <a href="https://github.com/JMHeartley/PicsOfUs/blob/main/PicsOfUs/Services/MemberService.cs#L154"
+                target="_blank" class="theme-text-link">
+                Within PicsOfUs resides the logic for filtering a list of objects for related family members and
+                converting that into a hierarchical data structure.
+            </a>
+        </p>
+        <p>
+            After I finished coding PicsOfUs, I saw an opportunity to extend a library that helped me and give back to
+            the open-source community. My goal was to condense the filtering and structuring logic from PicsOfUs into a
+            package allowing someone to get started with dTree quickly and make it more dynamic overall.
+        </p>
+    </app-project-details-section>
+    <app-project-details-section headerText="Problems and Solutions">
+        <p>
+            I wanted to use the same language as dTree, Javascript. Still, I tried to keep the development time going
+            smoothly, avoiding run-time errors, so I took a step back for a few weeks and learned Typescript.
+        </p>
+        <p>
+            There weren't many issues because I started from the beginning with test-driven-development.
+            <a href="https://github.com/JMHeartley/dTree-Seed/tree/main/src/tests/data" target="_blank"
+                class="theme-text-link">
+                I created MockData classes for tests</a>,
+            and things progressed nicely.
+        </p>
+        <p>
+            With all the logic finished, it was time for me to write the README; explanations and documentation came
+            easier since I learned a few things after designing the
+            <a routerLink="/projects/work-with-me-here" class="theme-text-link">
+                Work With Me Here</a>
+            tutorial. Although there was one major issue I hadn't considered, the (external) module pattern I used
+            required the user to set up the few files I had together. It would take a lot of work to figure out for a
+            beginner. I mean, I couldn't figure it out!
+        </p>
+        <p>
+            I converted the dTree-Seed to use the namespace (internal) pattern. I changed the tsconfig.json to transpile
+            all the code into one file. Now, dTree-Seed would be available in a global variable and all the logic would
+            be behind one method, just like dTree, perfect!
+        </p>
+    </app-project-details-section>
+    <app-project-details-section headerText="Final Thoughts">
+        <p>
+            Something I found surprising was there aren't any testing frameworks compatible with the namespace
+            Typescript pattern. I think this has to do with the community's (understandable) aversion to global
+            variables and the popularity of the module pattern. Most testing frameworks, especially those compatible
+            with Typescript, are created for Node.js,
+            <a href="https://www.typescriptlang.org/docs/handbook/namespaces-and-modules.html#:~:text=It%20is%20also%20worth%20noting%20that%2C%20for%20Node.js%20applications%2C%20modules%20are%20the%20default%20and%20we%20recommended%20modules%20over%20namespaces%20in%20modern%20code."
+                target="_blank" class="theme-text-link">
+                for which the module pattern is recommended</a>.
+        </p>
+        <p>
+            I'm happy with the outcome of dTree-Seed.
+            I'm pleased with the outcome. dTree-Seed works very well with dTree; all you have to do is call one method
+            to arrange your data.
+        </p>
+        <p>
+            I learned a lot about Typescript and testing, and I'm glad I was able to give back to the open-source
+            community. I hope dTree-Seed helps someone else save time and get started with dTree. If you have any
+            questions or comments, feel free to reach out to me. I'd love to hear from you!
+        </p>
+    </app-project-details-section>
+    <app-project-details-section>
+        <p class="text-center fst-italic">
+            <a href="https://github.com/JMHeartley/dTree-Seed#readme" target="_blank"
+                class="theme-link text-decoration-none">
+                Check out the documentation on GitHub for a detailed explanation and breakdown.
+            </a>
+        </p>
+    </app-project-details-section>
 </app-project-details>
