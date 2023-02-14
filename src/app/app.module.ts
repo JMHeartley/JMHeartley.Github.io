@@ -14,6 +14,7 @@ import { TagComponent } from './shared/tag/tag.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectListComponent } from './shared/project-list/project-list.component';
 import { ProjectDetailsSectionComponent } from './project-details/project-details-section/project-details-section.component';
+import { VerticalParallaxDirective } from './shared/vertical-parallax.directive';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     TagComponent,
     HomeComponent,
     ProjectListComponent,
-    ProjectDetailsSectionComponent
+    ProjectDetailsSectionComponent,
+    VerticalParallaxDirective
   ],
   imports: [
     BrowserModule,
