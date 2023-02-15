@@ -3,12 +3,26 @@
    No media query since this is the default in Bootstrap 
 */
 
-.bg-mountains-1 {
+.bg-mountains {
+    background-image: url(assets/img/mountains-1.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: auto 200vh;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: -1;
+}
+
+.bg-mountains-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    min-width: 100vw;
+    height: 150vh;
     z-index: -1;
     object-fit: cover;
     object-position: center top;

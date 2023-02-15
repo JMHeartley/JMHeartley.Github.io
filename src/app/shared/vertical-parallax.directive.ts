@@ -8,21 +8,20 @@ export class VerticalParallaxDirective implements OnInit {
   @Input('appVerticalParallax') targetElement: HTMLDivElement;
   @Input() parallaxSpeed: number = 0.5;
 
-  private initialObjectPosition: string[] = [];
-  private initialYOffset: number = 0;
+  private initialYPosition: number = 0;
 
-  constructor(private element: ElementRef) { }
+  constructor(private attachedElement: ElementRef) { }
 
   ngOnInit(): void {
-    this.initialObjectPosition = getComputedStyle(this.element.nativeElement).getPropertyValue('object-position').split(' ');
-    this.initialYOffset = parseInt(this.initialObjectPosition[1]);
+    const initialPosition = getComputedStyle(this.attachedElement.nativeElement).getPropertyValue('background-position').split(' ');
+    this.initialYPosition = parseInt(initialPosition[1]);
     this.targetElement.addEventListener('scroll', this.onTargetScroll.bind(this));
   }
 
   onTargetScroll() {
     const scrollPosition = this.targetElement.scrollTop;
-    const newObjectPositionY = this.initialYOffset + (scrollPosition * this.parallaxSpeed / window.innerHeight * 100);
-    this.element.nativeElement.style.objectPosition = `${this.initialObjectPosition[0]} ${newObjectPositionY}%`;
-    console.log(this.element.nativeElement.classList, this.element.nativeElement.style.objectPosition);
+    const parallaxIncrementPercentage = this.parallaxSpeed / this.targetElement.scrollHeight * 100;
+    const newObjectPositionY = this.initialYPosition + (scrollPosition * parallaxIncrementPercentage);
+    this.attachedElement.nativeElement.style.backgroundPositionY = `${newObjectPositionY}%`;
   }
 }
