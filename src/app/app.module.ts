@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { ProjectListComponent } from './shared/project-list/project-list.component';
 import { ProjectDetailsSectionComponent } from './project-details/project-details-section/project-details-section.component';
 import { VerticalParallaxDirective } from './shared/vertical-parallax.directive';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
   { path: 'projects/dtree-seed', component: DtreeSeedComponent },
   { path: 'projects/picsofus', component: PicsOfUsComponent },
   { path: 'projects/dreamlo.js', component: DreamloJsComponent },
-  { path: 'projects/work-with-me-here', component: WorkWithMeHereComponent }
+  { path: 'projects/work-with-me-here', component: WorkWithMeHereComponent },
+  { path: '**', component: PageNotFoundComponent } // must be last route in this array to work properly
 ];
 
 @NgModule({
@@ -40,7 +42,8 @@ const appRoutes: Routes = [
     HomeComponent,
     ProjectListComponent,
     ProjectDetailsSectionComponent,
-    VerticalParallaxDirective
+    VerticalParallaxDirective,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
