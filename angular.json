@@ -23,7 +23,8 @@
             "assets": [
               "src/favicon.png",
               "src/assets",
-              "src/CNAME"
+              "src/CNAME",
+              "src/404.html"
             ],
             "styles": [
               "src/theme.css",
