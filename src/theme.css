@@ -8,7 +8,7 @@
     --theme-box-shadow: 0 0 1.5rem 0.25rem var(--theme-teal-light);
 }
 
-.theme-bg-dark {
+.theme-bg {
     background-color: var(--theme-dark) !important;
 }
 
