@@ -45,12 +45,13 @@ export class ProjectListComponent implements OnInit, OnChanges, AfterViewInit {
     }
 
     this.timeline.from('.theme-card', {
-      duration: 0.5,
+      delay: 0.25,
+      duration: 0.25,
       opacity: 0,
-      stagger: 0.5,
+      stagger: 0.25,
       y: -20,
       scale: 0.5,
-      ease: 'power2.out'
+      ease: 'back.out(1.7)'
     });
   }
 }
