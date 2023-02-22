@@ -81,7 +81,7 @@
 .theme-text-link {
     text-decoration-color: var(--theme-teal-dark) !important;
     text-decoration-thickness: 0.125rem !important;
-    font-weight: bold;
+    text-underline-offset: 0.1875rem !important;
 }
 
 .theme-text-link:hover {
