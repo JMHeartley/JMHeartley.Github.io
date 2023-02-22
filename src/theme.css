@@ -50,11 +50,11 @@
 }
 
 .theme-scrollbar::-webkit-scrollbar {
-    width: 8px;
+    width: 0.5rem;
 }
 
 .theme-scrollbar::-webkit-scrollbar-thumb {
-    border-radius: 3px;
+    border-radius: 0.1875rem;
     -webkit-box-shadow: inset var(--theme-drop-shadow);
     background-color: var(--theme-teal-dark);
 }
