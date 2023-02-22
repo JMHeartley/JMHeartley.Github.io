@@ -4,19 +4,28 @@
         <div class="vh-100 position-relative theme-header">
             <div class="position-absolute bottom-50">
                 <div class="d-flex align-items-center">
-                    <span class="display-1">Hi. I'm
-                        <span class="theme-special">Justin</span>.
+                    <span class="display-1">
+                        <span id="hi">
+                            Hi.
+                        </span>
+                        <span id="justin">
+                            I'm
+                            <span class="theme-special">Justin</span>.
+                        </span>
                     </span>
                 </div>
-                <p class="lead">I write software.</p>
+                <p class="lead" id="subtitle">I write software.</p>
             </div>
-            <p class="position-absolute bottom-0 w-100 text-center">
-                Check out my
-                <span class="theme-special">portfol.io</span>
-                <br>
-                <i class="fa-solid fa-chevron-down"></i>
-            </p>
+            <div class="position-absolute bottom-0 w-100 text-center">
+                <div id="check-out">
+                    Check out my
+                    <span class="theme-special">portfol.io</span>
+                </div>
+                <div id="arrow">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
         </div>
-        <app-project-list></app-project-list>
+        <app-project-list [timeline]="this.timeline"></app-project-list>
     </div>
 </div>
