@@ -74,7 +74,7 @@
     color: var(--theme-teal-light) !important;
 }
 
-.theme-link-special {
+.theme-special-link {
     color: var(--theme-teal-light) !important;
 }
 
@@ -108,7 +108,7 @@
 }
 
 .theme-link:hover,
-.theme-link-special:hover,
+.theme-special-link:hover,
 .theme-link.active,
 .theme-text-link:hover {
     color: var(--theme-teal-light) !important;
