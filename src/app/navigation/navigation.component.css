@@ -24,28 +24,30 @@
     .navbar .navbar-collapse.collapse {
         display: flex;
         opacity: 0;
-        pointer-events: none
+        pointer-events: none;
     }
 
     .navbar .navbar-collapse.collapsing[style*="height"] {
         opacity: 1;
-        height: 100vh !important
+        height: 100vh !important;
     }
 
     .navbar .navbar-collapse.collapsing {
         opacity: 0;
-        height: 100vh
+        height: 100vh;
+        z-index: 98;
     }
 
     .navbar .navbar-collapse.collapse.show {
         opacity: 1;
-        pointer-events: auto
+        pointer-events: auto;
+        z-index: 98;
     }
 
     .navbar .navbar-collapse .navbar-nav {
         margin-top: auto;
         margin-right: initial !important;
         margin-left: initial !important;
-        margin-bottom: auto
+        margin-bottom: auto;
     }
 }
