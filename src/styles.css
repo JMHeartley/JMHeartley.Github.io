@@ -30,6 +30,8 @@
 
 .max-vh-100 {
     max-height: 100vh !important;
+    max-height: -moz-available !important;
+    max-height: -webkit-fill-available !important;
 }
 
 .image-fluid {
